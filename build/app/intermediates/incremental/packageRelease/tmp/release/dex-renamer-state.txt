@@ -1,0 +1,4 @@
+#Sat Sep 21 09:26:07 ICT 2019
+base.0=/home/superuser/Desktop/first_flutter/myapp/build/app/intermediates/transforms/r8/release/0/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
