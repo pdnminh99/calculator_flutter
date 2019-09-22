@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'calculator.dart';
 
+bool isDarkTheme = true;
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,8 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calculator',
-      theme: ThemeData.light(),
+      theme: (() => isDarkTheme ? ThemeData.light() : ThemeData.light())(),
       home: Calculator('Calculator'),
     );
   }
+
 }
