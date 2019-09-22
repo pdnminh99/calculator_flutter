@@ -2,36 +2,65 @@ import 'package:flutter/material.dart';
 import 'calculator.dart';
 
 class Keyboards extends State<Calculator> {
-
   String _selection;
   bool _isTypeOne = true;
 
   get _keyset => _isTypeOne
       ? [
-          "7", "8", "9", "<",
-          "4", "5", "6", "/",
-          "1", "2", "3", "x", 
-          "0", ".", "=", "+"
+          "7",
+          "8",
+          "9",
+          "<",
+          "4",
+          "5",
+          "6",
+          "/",
+          "1",
+          "2",
+          "3",
+          "x",
+          "0",
+          ".",
+          "=",
+          "+"
         ]
       : [
-          "sin", "cos", "tan", "<",
-          "ln", "log", "sqrt", "pi",
-          "(", ")", "^", "e",
+          "sin",
+          "cos",
+          "tan",
+          "<",
+          "ln",
+          "log",
+          "sqrt",
+          "pi",
+          "(",
+          ")",
+          "^",
+          "e",
         ];
 
   @override
   Widget build(BuildContext context) => getScaffold();
 
   Widget getScaffold() => Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-          actions: <Widget>[popUpButton()],
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: <Widget>[popUpButton()],
+      ),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Text("Hello World",
+                style: TextStyle(
+                  letterSpacing: 2,
+                  fontSize: 30,
+                )),
+            Expanded(
+                child: GridView.count(
+                    crossAxisCount: 4, children: getKeyset(_keyset)))
+          ],
         ),
-        body: GridView.count(
-          crossAxisCount: 4,
-          children: getKeyset(_keyset),
-        ),
-      );
+      ));
 
   List<Widget> getKeyset(List<String> keys) => [for (var k in keys) button(k)];
 
@@ -68,8 +97,4 @@ class Keyboards extends State<Calculator> {
           ),
         ),
       );
-
-  Widget display() {
-
-  }
 }
