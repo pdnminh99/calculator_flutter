@@ -4,6 +4,7 @@ import 'calculator.dart';
 class Keyboards extends State<Calculator> {
   String _selection;
   bool _isTypeOne = true;
+  String _displayText = "";
 
   get _keyset => _isTypeOne
       ? [
@@ -44,17 +45,25 @@ class Keyboards extends State<Calculator> {
 
   Widget getScaffold() => Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.lightbulb_outline),
         title: Text(widget.title),
-        actions: <Widget>[popUpButton()],
+        actions: <Widget>[popUpButton(), switchKeyboardAction()],
       ),
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text("Hello World",
+            Card(
+              child: Text(
+                "$_displayText",
+                softWrap: true,
+                maxLines: 3,
+                overflow: TextOverflow.fade,
                 style: TextStyle(
-                  letterSpacing: 2,
-                  fontSize: 30,
-                )),
+                  fontSize: 40,
+                ),
+              ),
+            ),
             Expanded(
                 child: GridView.count(
                     crossAxisCount: 4, children: getKeyset(_keyset)))
@@ -63,6 +72,16 @@ class Keyboards extends State<Calculator> {
       ));
 
   List<Widget> getKeyset(List<String> keys) => [for (var k in keys) button(k)];
+
+  Widget switchKeyboardAction() => IconButton(
+        icon: Icon(Icons.loop),
+        tooltip: "Toggle between keyboards",
+        onPressed: () {
+          setState(() {
+            _isTypeOne = !_isTypeOne;
+          });
+        },
+      );
 
   Widget popUpButton() => PopupMenuButton<String>(
         onSelected: (String result) {
@@ -83,18 +102,46 @@ class Keyboards extends State<Calculator> {
       );
 
   Widget button(String character) => Container(
-        child: RawMaterialButton(
+        child: FlatButton(
           onPressed: () {
             setState(() {
-              _isTypeOne = !_isTypeOne;
+              buttonClicked(character);
             });
           },
           child: Text(
             character,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 30,
+              color: (() => isOperands(character) ? Colors.blue : Colors.white)()
             ),
           ),
         ),
       );
+
+  void buttonClicked(String buttonType) {
+    switch (buttonType) {
+      case "<":
+        _displayText = _displayText.substring(0, _displayText.length - 1);
+        break;
+      case "=":
+        break;
+      default:
+        _displayText += buttonType;
+        break;
+    }
+  }
+
+  bool isOperands(String buttonType) {
+      switch (buttonType) {
+        case "<":
+        case "/":
+        case "x":
+        case "+":
+        case "=":
+        case "-":
+          return true;
+        default:
+          return false;
+      }
+    }
 }

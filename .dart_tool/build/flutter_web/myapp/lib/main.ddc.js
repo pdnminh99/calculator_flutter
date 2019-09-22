@@ -108,7 +108,7 @@ define(['dart_sdk', 'packages/flutter/material', 'packages/myapp/calculator', 'p
   let C3;
   main.MyApp = class MyApp extends framework.StatelessWidget {
     build(context) {
-      return new app.MaterialApp.new({title: "Calculator", theme: dart.fn(() => dart.test(main.isDarkTheme) ? theme_data.ThemeData.light() : theme_data.ThemeData.light(), VoidToThemeData())(), home: new calculator.Calculator.new("Calculator", {$creationLocationd_0dea112b090073317d4: C0 || CT.C0}), $creationLocationd_0dea112b090073317d4: C3 || CT.C3});
+      return new app.MaterialApp.new({title: "Calculator", theme: dart.fn(() => dart.test(main.isDarkTheme) ? theme_data.ThemeData.dark() : theme_data.ThemeData.light(), VoidToThemeData())(), home: new calculator.Calculator.new("Calculator", {$creationLocationd_0dea112b090073317d4: C0 || CT.C0}), $creationLocationd_0dea112b090073317d4: C3 || CT.C3});
     }
   };
   (main.MyApp.new = function(opts) {
@@ -136,7 +136,7 @@ define(['dart_sdk', 'packages/flutter/material', 'packages/myapp/calculator', 'p
   dart.trackLibraries("packages/myapp/main", {
     "package:myapp/main.dart": main
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["main.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAU4B;AACxB,YAAO,iCACE,qBACC,AAA0D,wBAApD,oBAAwB,+BAAoB,0DACpD,8BAAW;IAErB;;;;;;EAEF;;;;;;;;;;AAbe,0BAAO;EAAQ;;MAFzB,gBAAW;YAAG","file":"main.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["main.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAU4B;AACxB,YAAO,iCACE,qBACC,AAAyD,wBAAnD,oBAAwB,8BAAmB,0DACnD,8BAAW;IAErB;;;;;;EAEF;;;;;;;;;;AAbe,0BAAO;EAAQ;;MAFzB,gBAAW;YAAG","file":"main.ddc.js"}');
   // Exports:
   return {
     main: main

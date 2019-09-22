@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/superuser/Desktop/first_flutter/myapp/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/home/superuser/Documents/Git Repositories/calculator_flutter/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/home/superuser/.gradle/caches/transforms-2/files-2.1/eac699f134901d0d2fa5c1a81ade99d0/support-compat-28.0.0/res/values-cs/values-cs.xml",

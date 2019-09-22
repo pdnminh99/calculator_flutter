@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/superuser/Desktop/first_flutter/myapp/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "outputFile": "/home/superuser/Documents/Git Repositories/calculator_flutter/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/superuser/.gradle/caches/transforms-2/files-2.1/4d7a6d89bb3060d92783b2dcb8e5f276/coordinatorlayout-28.0.0/res/values/values.xml",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/home/superuser/Desktop/first_flutter/myapp/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/superuser/Documents/Git Repositories/calculator_flutter/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
