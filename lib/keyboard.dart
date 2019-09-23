@@ -23,18 +23,13 @@ class Keyboards extends State<MyApp> {
           "*",
           "0",
           ".",
-          "=",
+          "-",
           "+"
         ]
       : [
-          "ln",
-          "sqrt",
           "pi",
-          "<",
-          "(",
-          ")",
           "^",
-          "e",
+          "<",
         ];
 
   @override
