@@ -99,6 +99,9 @@ class Keyboards extends State<MyApp> {
               case 'theme':
                 this.isDarkTheme = !this.isDarkTheme;
                 break;
+              case 'reset':
+                this.calc.reset();
+                break;
               default:
                 break;
             }
@@ -112,6 +115,10 @@ class Keyboards extends State<MyApp> {
           const PopupMenuItem<String>(
             value: "history",
             child: Text('History'),
+          ),
+          const PopupMenuItem<String>(
+            value: "reset",
+            child: Text('Reset'),
           ),
         ],
       );

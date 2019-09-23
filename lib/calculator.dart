@@ -14,6 +14,11 @@ class Calculator {
     }
   }
 
+  void reset() {
+    this._displayOperations = "";
+    this._rawOperations = "";
+  }
+
   String getResult() => _displayResult;
 
   // this function is for testing purpose.
