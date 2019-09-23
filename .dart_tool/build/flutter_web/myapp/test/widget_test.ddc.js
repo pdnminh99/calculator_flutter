@@ -1,4 +1,4 @@
-define(['dart_sdk', 'packages/flutter_test/flutter_test', 'packages/myapp/main', 'packages/flutter/src/widgets/actions', 'packages/flutter/material'], function(dart_sdk, packages__flutter_test__flutter_test, packages__myapp__main, packages__flutter__src__widgets__actions, packages__flutter__material) {
+define(['dart_sdk', 'packages/flutter_test/flutter_test', 'packages/myapp/keyboard', 'packages/flutter/src/widgets/actions', 'packages/flutter/material'], function(dart_sdk, packages__flutter_test__flutter_test, packages__myapp__keyboard, packages__flutter__src__widgets__actions, packages__flutter__material) {
   'use strict';
   const core = dart_sdk.core;
   const async = dart_sdk.async;
@@ -7,7 +7,7 @@ define(['dart_sdk', 'packages/flutter_test/flutter_test', 'packages/myapp/main',
   const widget_tester = packages__flutter_test__flutter_test.src__widget_tester;
   const finders = packages__flutter_test__flutter_test.src__finders;
   const matchers = packages__flutter_test__flutter_test.src__matchers;
-  const main = packages__myapp__main.main;
+  const main = packages__myapp__keyboard.main;
   const widget_inspector = packages__flutter__src__widgets__actions.src__widgets__widget_inspector;
   const icons = packages__flutter__material.src__material__icons;
   const widget_test = Object.create(dart.library);

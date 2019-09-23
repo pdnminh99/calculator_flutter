@@ -89,7 +89,7 @@ let modulePaths = {
  "packages/matcher/src/core_matchers": "packages/matcher/src/core_matchers.ddc",
  "packages/meta/meta": "packages/meta/meta.ddc",
  "packages/myapp/calculator": "packages/myapp/calculator.ddc",
- "packages/myapp/main": "packages/myapp/main.ddc",
+ "packages/myapp/keyboard": "packages/myapp/keyboard.ddc",
  "packages/path/path": "packages/path/path.ddc",
  "packages/pedantic/pedantic": "packages/pedantic/pedantic.ddc",
  "packages/quiver/testing/async": "packages/quiver/testing/async.ddc",

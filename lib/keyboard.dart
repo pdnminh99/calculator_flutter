@@ -159,21 +159,6 @@ class Keyboards extends State<MyApp> {
     }
   }
 
-  // String convertLabel(String label) {
-  //   switch (label) {
-  //     case "/":
-  //       return "\u{00F7}";
-  //     case "*":
-  //       return "\u{00D7}";
-  //     case "sqrt":
-  //       return "\u{221A}";
-  //     case "pi":
-  //       return "\u{3C0}";
-  //     default:
-  //       return label;
-  //   }
-  // }
-
   bool isOperands(String buttonType) {
     switch (buttonType) {
       case "<":

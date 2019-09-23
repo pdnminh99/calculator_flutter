@@ -1,1 +1,1 @@
-{"isEntrypoint":true,"deps":["flutter|lib/material.dart","myapp|lib/keyboard.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}
+{"isEntrypoint":true,"deps":[],"parts":[],"conditionalDeps":[],"sdkDeps":["math"],"hasMain":false}
