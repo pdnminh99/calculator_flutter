@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
-import 'calculator.dart';
-
-bool isDarkTheme = true;
+import 'package:myapp/keyboard.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Calculator',
-      theme: (() => isDarkTheme ? ThemeData.dark() : ThemeData.light())(),
-      home: Calculator('Calculator'),
-    );
-  }
-
+  Keyboards createState() => Keyboards();
 }

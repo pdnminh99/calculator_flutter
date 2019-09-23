@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'calculator.dart';
+import 'package:myapp/calculator.dart';
+import 'main.dart';
 
-class Keyboards extends State<Calculator> {
+class Keyboards extends State<MyApp> {
   String _selection;
   bool _isTypeOne = true;
+  var calc = Calculator();
   String _displayText = "";
+  String _displayResult = "";
+  bool isDarkTheme = true;
 
   get _keyset => _isTypeOne
       ? [
@@ -41,12 +45,17 @@ class Keyboards extends State<Calculator> {
         ];
 
   @override
-  Widget build(BuildContext context) => getScaffold();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: (() => isDarkTheme ? ThemeData.dark() : ThemeData.light())(),
+      home: getScaffold('Calculator'),
+    );
+  }
 
-  Widget getScaffold() => Scaffold(
+  Widget getScaffold(String title) => Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.lightbulb_outline),
-        title: Text(widget.title),
+        title: Text(title),
         actions: <Widget>[popUpButton(), switchKeyboardAction()],
       ),
       body: Container(
@@ -54,16 +63,28 @@ class Keyboards extends State<Calculator> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Card(
-              child: Text(
-                "$_displayText",
-                softWrap: true,
-                maxLines: 3,
-                overflow: TextOverflow.fade,
-                style: TextStyle(
-                  fontSize: 40,
+                child: Column(
+              children: <Widget>[
+                Text(
+                  "${calc.toString()}",
+                  softWrap: false,
+                  textAlign: TextAlign.right,
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                    fontSize: 40,
+                  ),
                 ),
-              ),
-            ),
+                Text(
+                  "${calc.getResult()}",
+                  softWrap: false,
+                  textAlign: TextAlign.right,
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                    fontSize: 40,
+                  ),
+                ),
+              ],
+            )),
             Expanded(
                 child: GridView.count(
                     crossAxisCount: 4, children: getKeyset(_keyset)))
@@ -87,6 +108,9 @@ class Keyboards extends State<Calculator> {
         onSelected: (String result) {
           setState(() {
             _selection = result;
+            if (result == "theme") {
+              this.isDarkTheme = !this.isDarkTheme;
+            }
           });
         },
         itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
@@ -111,9 +135,10 @@ class Keyboards extends State<Calculator> {
           child: Text(
             character,
             style: TextStyle(
-              fontSize: 30,
-              color: (() => isOperands(character) ? Colors.blue : Colors.white)()
-            ),
+                fontSize: 30,
+                color: (() => isOperands(character)
+                    ? Colors.blue
+                    : this.isDarkTheme ? Colors.white : Colors.black)()),
           ),
         ),
       );
@@ -132,16 +157,16 @@ class Keyboards extends State<Calculator> {
   }
 
   bool isOperands(String buttonType) {
-      switch (buttonType) {
-        case "<":
-        case "/":
-        case "x":
-        case "+":
-        case "=":
-        case "-":
-          return true;
-        default:
-          return false;
-      }
+    switch (buttonType) {
+      case "<":
+      case "/":
+      case "x":
+      case "+":
+      case "=":
+      case "-":
+        return true;
+      default:
+        return false;
     }
+  }
 }

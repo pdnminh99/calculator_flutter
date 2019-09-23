@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'keyboard.dart';
+class Calculator {
+  var _displayOperations = "";
+  var _displayResult = "";
 
-class Calculator extends StatefulWidget {
-  Calculator(this.title);
+  String getResult() => _displayResult;
 
-  final String title;
+  void addLabel(String label) => _displayOperations += label;
 
   @override
-  Keyboards createState() => Keyboards();
+  String toString() => _displayOperations;
 }
