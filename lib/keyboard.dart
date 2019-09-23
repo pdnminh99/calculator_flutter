@@ -5,8 +5,6 @@ import 'main.dart';
 class Keyboards extends State<MyApp> {
   bool _isTypeOne = true;
   var calc = Calculator();
-  String _displayText = "";
-  String _displayResult = "";
   bool isDarkTheme = true;
 
   get _keyset => _isTypeOne
@@ -22,21 +20,17 @@ class Keyboards extends State<MyApp> {
           "1",
           "2",
           "3",
-          "x",
+          "\u{00D7}",
           "0",
           ".",
           "=",
           "+"
         ]
       : [
-          "sin",
-          "cos",
-          "tan",
-          "<",
           "ln",
-          "log",
           "\u{221A}",
           "\u{3C0}",
+          "<",
           "(",
           ")",
           "^",
@@ -133,6 +127,7 @@ class Keyboards extends State<MyApp> {
         return Container(
           child: IconButton(
             icon: Icon(Icons.arrow_back),
+            color: Colors.blue,
             tooltip: "Delete label",
             onPressed: () {
               setState(() {
@@ -166,7 +161,8 @@ class Keyboards extends State<MyApp> {
     switch (buttonType) {
       case "<":
       case "/":
-      case "x":
+      case "\u{00D7}":
+      case "\u{00F7}":
       case "+":
       case "=":
       case "-":
