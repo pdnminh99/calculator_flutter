@@ -59,7 +59,7 @@ class Keyboards extends State<MyApp> {
                 child: Column(
               children: <Widget>[
                 Text(
-                  "${calc.toString(isRaw: true)}",
+                  "${calc.toString(isRaw: false)}",
                   softWrap: false,
                   textAlign: TextAlign.right,
                   overflow: TextOverflow.fade,
