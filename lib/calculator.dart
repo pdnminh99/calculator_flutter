@@ -1,5 +1,5 @@
 class Calculator {
-  String _displayOperations;
+  String _displayOperations = "";
   String get _displayResult {
     return "";
   }
