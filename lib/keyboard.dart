@@ -16,11 +16,11 @@ class Keyboards extends State<MyApp> {
           "4",
           "5",
           "6",
-          "\u{00F7}",
+          "/",
           "1",
           "2",
           "3",
-          "\u{00D7}",
+          "*",
           "0",
           ".",
           "=",
@@ -28,8 +28,8 @@ class Keyboards extends State<MyApp> {
         ]
       : [
           "ln",
-          "\u{221A}",
-          "\u{3C0}",
+          "sqrt",
+          "pi",
           "<",
           "(",
           ")",
@@ -59,7 +59,7 @@ class Keyboards extends State<MyApp> {
                 child: Column(
               children: <Widget>[
                 Text(
-                  "${calc.toString()}",
+                  "${calc.toString(isRaw: true)}",
                   softWrap: false,
                   textAlign: TextAlign.right,
                   overflow: TextOverflow.fade,
@@ -145,7 +145,7 @@ class Keyboards extends State<MyApp> {
               });
             },
             child: Text(
-              character,
+              this.calc.convertLabel(character),
               style: TextStyle(
                   fontSize: 30,
                   color: (() => isOperands(character)
@@ -157,12 +157,26 @@ class Keyboards extends State<MyApp> {
     }
   }
 
+  // String convertLabel(String label) {
+  //   switch (label) {
+  //     case "/":
+  //       return "\u{00F7}";
+  //     case "*":
+  //       return "\u{00D7}";
+  //     case "sqrt":
+  //       return "\u{221A}";
+  //     case "pi":
+  //       return "\u{3C0}";
+  //     default:
+  //       return label;
+  //   }
+  // }
+
   bool isOperands(String buttonType) {
     switch (buttonType) {
       case "<":
       case "/":
-      case "\u{00D7}":
-      case "\u{00F7}":
+      case "*":
       case "+":
       case "=":
       case "-":

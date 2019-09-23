@@ -1,4 +1,4 @@
-#Mon Sep 23 09:34:29 ICT 2019
+#Mon Sep 23 09:41:34 ICT 2019
 base.0=/home/superuser/Documents/Git Repositories/calculator_flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
