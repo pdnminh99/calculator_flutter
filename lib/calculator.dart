@@ -7,8 +7,8 @@ class Calculator {
     try {
       if (_rawOperations == "") return "";
       var queue = _parseToQueue(_rawOperations);
-      var result = _calculate(queue).toStringAsFixed(4);
-      return result;
+      var result = _calculate(queue);
+      return result % 1 == 0 ? result.toStringAsFixed(0) : result.toString();
     } catch (e) {
       return "";
     }
