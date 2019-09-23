@@ -3,7 +3,6 @@ import 'package:myapp/calculator.dart';
 import 'main.dart';
 
 class Keyboards extends State<MyApp> {
-  String _selection;
   bool _isTypeOne = true;
   var calc = Calculator();
   String _displayText = "";
@@ -19,7 +18,7 @@ class Keyboards extends State<MyApp> {
           "4",
           "5",
           "6",
-          "/",
+          "\u{00F7}",
           "1",
           "2",
           "3",
@@ -36,8 +35,8 @@ class Keyboards extends State<MyApp> {
           "<",
           "ln",
           "log",
-          "sqrt",
-          "pi",
+          "\u{221A}",
+          "\u{3C0}",
           "(",
           ")",
           "^",
@@ -107,16 +106,19 @@ class Keyboards extends State<MyApp> {
   Widget popUpButton() => PopupMenuButton<String>(
         onSelected: (String result) {
           setState(() {
-            _selection = result;
-            if (result == "theme") {
-              this.isDarkTheme = !this.isDarkTheme;
+            switch (result) {
+              case 'theme':
+                this.isDarkTheme = !this.isDarkTheme;
+                break;
+              default:
+                break;
             }
           });
         },
         itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
           const PopupMenuItem<String>(
             value: "theme",
-            child: Text('Switch theme'),
+            child: Text('Switch Theme'),
           ),
           const PopupMenuItem<String>(
             value: "history",
@@ -125,34 +127,38 @@ class Keyboards extends State<MyApp> {
         ],
       );
 
-  Widget button(String character) => Container(
-        child: FlatButton(
-          onPressed: () {
-            setState(() {
-              buttonClicked(character);
-            });
-          },
-          child: Text(
-            character,
-            style: TextStyle(
-                fontSize: 30,
-                color: (() => isOperands(character)
-                    ? Colors.blue
-                    : this.isDarkTheme ? Colors.white : Colors.black)()),
-          ),
-        ),
-      );
-
-  void buttonClicked(String buttonType) {
-    switch (buttonType) {
+  Widget button(String character) {
+    switch (character) {
       case "<":
-        _displayText = _displayText.substring(0, _displayText.length - 1);
-        break;
-      case "=":
-        break;
+        return Container(
+          child: IconButton(
+            icon: Icon(Icons.arrow_back),
+            tooltip: "Delete label",
+            onPressed: () {
+              setState(() {
+                this.calc.addLabel(character);
+              });
+            },
+          ),
+        );
       default:
-        _displayText += buttonType;
-        break;
+        return Container(
+          child: FlatButton(
+            onPressed: () {
+              setState(() {
+                this.calc.addLabel(character);
+              });
+            },
+            child: Text(
+              character,
+              style: TextStyle(
+                  fontSize: 30,
+                  color: (() => isOperands(character)
+                      ? Colors.blue
+                      : this.isDarkTheme ? Colors.white : Colors.black)()),
+            ),
+          ),
+        );
     }
   }
 
