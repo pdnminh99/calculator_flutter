@@ -1,4 +1,4 @@
-# Calculator
+# Flutter & Dart Calculator
 
 - Auth: Pham Do Nhat Minh
 - StdID: 2172259
