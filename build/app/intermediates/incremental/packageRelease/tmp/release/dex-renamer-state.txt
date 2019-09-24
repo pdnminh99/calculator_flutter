@@ -1,4 +1,4 @@
-#Mon Sep 23 22:38:04 ICT 2019
+#Tue Sep 24 16:06:37 ICT 2019
 base.0=/home/superuser/Documents/Git Repositories/calculator_flutter/build/app/intermediates/transforms/r8/release/0/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -128,7 +128,7 @@ class Keyboards extends State<MyApp> {
       case "<":
         return Container(
           child: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: Icon(Icons.backspace),
             color: Colors.blue,
             tooltip: "Delete label",
             onPressed: () {
