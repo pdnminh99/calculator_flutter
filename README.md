@@ -1,9 +1,9 @@
 # Calculator
 
-Auth:       Pham Do Nhat Minh
-StdID:      2172259
-StartDate:  Sep 21, 2019
-Subject:    Practice Project A
+Auth:\t\tPham Do Nhat Minh\n
+StdID:\t\t2172259\n
+StartDate:\tSep 21, 2019\n
+Subject:\tPractice Project A\n
 
 ## How to start
 
