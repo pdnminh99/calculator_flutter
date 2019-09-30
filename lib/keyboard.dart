@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/calculator.dart';
+import 'calculator.dart';
 import 'main.dart';
 
 class Keyboards extends State<MyApp> {
