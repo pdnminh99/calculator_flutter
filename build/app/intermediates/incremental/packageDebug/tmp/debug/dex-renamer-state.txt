@@ -1,4 +1,4 @@
-#Mon Sep 30 20:02:19 ICT 2019
-base.0=/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/transforms/dexMerger/debug/0
+#Wed Oct 02 10:25:27 ICT 2019
+base.0=F\:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

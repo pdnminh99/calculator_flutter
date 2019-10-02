@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\drawable\\launch_background.xml"
     },
     {
-        "merged": "/home/superuser/Documents/My Repositories/calculator_flutter/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/home/superuser/Documents/My Repositories/calculator_flutter/android/app/src/main/res/drawable/launch_background.xml"
+        "merged": "F:\\Repositories\\calculator_flutter\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "F:\\Repositories\\calculator_flutter\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]
